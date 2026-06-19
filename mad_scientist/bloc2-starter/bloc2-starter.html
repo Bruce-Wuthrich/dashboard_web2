@@ -310,6 +310,9 @@ $("#" + nawdata).fadeIn(400);
 $("#toast").text(nawdata).show().delay(1800).fadeOut(400);
 $(this).addClass("activeNav");
 
+    visitedPages.add(nawdata);
+    let pct = visitedPages.size / 5 * 100;
+    $("#progressFill").animate({ width: pct + "%" }, 400);
 
 });
 
